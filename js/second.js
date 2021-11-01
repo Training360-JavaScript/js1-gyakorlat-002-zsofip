@@ -15,3 +15,13 @@ hogy a tömb minden eleme number típusú-e vagy sem
 - `someElementsAreNumbers`: Értéke true/false attól függően, 
 hogy a tömbben van-e number típusú elem vagy sem
 */
+
+'use strict';
+
+const checker = (array, value) => ({ 
+    exists: array.includes(value), 
+    index: array.indexOf(value), 
+    allElementsAreNumbers: array.every(item => Number.isFinite(item)),
+    someElementsAreNumbers: array.some(item => Number.isFinite(item))
+});
+
